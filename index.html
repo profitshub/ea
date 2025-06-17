@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EA Upload Form</title>
+</head>
+<body>
+  <h2>Submit your EA Details</h2>
+
+  <form action="https://bold-firmly-gazelle.ngrok-free.app/webhook-test/ea_upload" method="POST" enctype="multipart/form-data">
+
+    <!-- EA Code -->
+    <label for="ea_code">EA Code (optional if uploading a file):</label><br>
+    <textarea id="ea_code" name="ea_code" rows="10" cols="50" placeholder="Paste EA code here..."></textarea><br><br>
+
+    <!-- Instructions -->
+    <label for="instructions">Instructions:</label><br>
+    <textarea id="instructions" name="instructions" rows="5" cols="50" placeholder="e.g. Optimize lot sizing and simplify OnTick"></textarea><br><br>
+
+    <!-- EA File -->
+    <label for="ea_file">Upload EA File (.mq4 or .mq5):</label><br>
+    <input type="file" id="ea_file" name="ea_file" accept=".mq4,.mq5" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
